@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
+import os
 
-births = pd.read_csv("C:\\Users\\topi5\\Documents\\Studium\\07_Semester\\Kapitel_01\\US_births_2000-2014.csv")
+path = os.path.join(os.path.dirname(__file__), "US_births_2000-2014.csv")
+births = pd.read_csv(path)
 
 # extract date components
 dateVals = births[["year", "month", "day_of_month"]]
